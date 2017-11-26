@@ -33,6 +33,7 @@
             this.LabelScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
+            this.labelGameOver = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.pbCanvas.Size = new System.Drawing.Size(805, 784);
             this.pbCanvas.TabIndex = 0;
             this.pbCanvas.TabStop = false;
+            this.pbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pbCanvas_Paint);
             // 
             // LabelScore
             // 
@@ -64,11 +66,22 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "label1";
             // 
+            // labelGameOver
+            // 
+            this.labelGameOver.AutoSize = true;
+            this.labelGameOver.Location = new System.Drawing.Point(118, 67);
+            this.labelGameOver.Name = "labelGameOver";
+            this.labelGameOver.Size = new System.Drawing.Size(70, 25);
+            this.labelGameOver.TabIndex = 2;
+            this.labelGameOver.Text = "label1";
+            this.labelGameOver.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1315, 865);
+            this.Controls.Add(this.labelGameOver);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LabelScore);
             this.Controls.Add(this.pbCanvas);
@@ -86,6 +99,7 @@
         private System.Windows.Forms.Label LabelScore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer GameTimer;
+        private System.Windows.Forms.Label labelGameOver;
     }
 }
 
