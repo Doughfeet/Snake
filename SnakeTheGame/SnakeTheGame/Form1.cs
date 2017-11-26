@@ -42,5 +42,16 @@ namespace SnakeTheGame
             GenerateFood();
         }
 
+        private void GenerateFood()
+        {
+            int maxXPosition = pbCanvas.Size.Width / Settings.Width;
+            int maxYPosition = pbCanvas.Size.Height / Settings.Height;
+
+            Random random = new Random();
+            food = new Circle();
+
+            food.X = random.Next(0, maxXPosition);
+            food.Y = random.Next(0, maxYPosition);
+        }
     }
 }
