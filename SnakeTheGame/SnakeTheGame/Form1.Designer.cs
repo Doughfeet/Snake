@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbCanvas = new System.Windows.Forms.PictureBox();
             this.LabelScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.GameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +85,7 @@
         private System.Windows.Forms.PictureBox pbCanvas;
         private System.Windows.Forms.Label LabelScore;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer GameTimer;
     }
 }
 
